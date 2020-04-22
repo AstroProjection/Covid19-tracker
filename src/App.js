@@ -18,8 +18,8 @@ class App extends React.Component {
     return (
       <div className="container">
         <Cards data={data} />
-        <Chart />
         <CountryDropdown />
+        <Chart data={data} />
       </div>
     );
   }
