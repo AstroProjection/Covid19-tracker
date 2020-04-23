@@ -10,7 +10,7 @@ const Chart = ({ data: { confirmed, recovered, deaths } }) => {
     const fetchAPI = async () => {
       const fetchedData = await fetchDailyData();
       setDailyData(fetchedData);
-      console.log(fetchedData);
+      // console.log(fetchedData);
     };
     fetchAPI();
   }, []);
