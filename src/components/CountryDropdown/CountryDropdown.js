@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { NativeSelect, FormControl, InputLabel } from "@material-ui/core";
-import { fetchCountryData } from "../../api";
+import { fetchCountryList } from "../../api";
 import styles from "./CountryDropdown.module.css";
 
-const CountryDropdown = () => {
+const CountryDropdown = ({ countryChange }) => {
   const [countryList, setCountryList] = useState([]);
   useEffect(() => {
     const fetchCountries = async () => {
-      setCountryList(await fetchCountryData());
+      setCountryList(await fetchCountryList());
     };
 
     fetchCountries();
-  }, [countryList]);
+  }, []);
 
   return (
     <FormControl className={styles.form}>
       <InputLabel>Select Country:</InputLabel>
-      <NativeSelect>
+      <NativeSelect
+        defaultValue=""
+        onChange={(e) => {
+          countryChange(e.target.value);
+        }}
+      >
         <option value="global">Global</option>
         {countryList.map((country, index) => (
           <option key={index} value={country}>

@@ -34,7 +34,7 @@ const Cards = ({ data: { confirmed, deaths, recovered, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              Real Date:{new Date(lastUpdate).toDateString()}
+              Last Updated:{new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2">Number of active cases</Typography>
           </CardContent>
@@ -60,7 +60,7 @@ const Cards = ({ data: { confirmed, deaths, recovered, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              Real Date:{new Date(lastUpdate).toDateString()}
+              Last Updated:{new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2">Number of recovered cases</Typography>
           </CardContent>
@@ -86,7 +86,7 @@ const Cards = ({ data: { confirmed, deaths, recovered, lastUpdate } }) => {
               />
             </Typography>
             <Typography color="textSecondary">
-              Real Date:{new Date(lastUpdate).toDateString()}
+              Last updated:{new Date(lastUpdate).toDateString()}
             </Typography>
             <Typography variant="body2">
               Number of deaths due to Covid-19
