@@ -39,6 +39,7 @@ const Chart = ({
             },
           ],
         }}
+        height={200}
       />
     ) : (
       console.log("empty")
