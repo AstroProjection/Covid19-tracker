@@ -13,14 +13,14 @@ const Chart = ({
     const fetchAPI = async () => {
       const fetchedData = await fetchDailyData();
       setDailyData(fetchedData);
-      // console.log(fetchedData);
     };
     fetchAPI();
-  }, []);
+  }, [country]);
 
   const LineChart =
     dailyData.length !== 0 ? (
       <Line
+        className={styles.chart}
         data={{
           labels: dailyData.map(({ date }) => date),
           datasets: [
@@ -74,8 +74,11 @@ const Chart = ({
   ) : null;
 
   // console.log(LineChart);
+
   return (
-    <div className={styles.container}>{country ? BarChart : LineChart}</div>
+    <div className={styles.container}>
+      {country && country !== "-" ? BarChart : LineChart}
+    </div>
   );
 };
 

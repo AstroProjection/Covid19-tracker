@@ -15,14 +15,14 @@ const CountryDropdown = ({ countryChange }) => {
 
   return (
     <FormControl className={styles.form}>
-      <InputLabel>Select Country:</InputLabel>
+      <InputLabel focused={true}>Select Country:</InputLabel>
       <NativeSelect
         defaultValue=""
         onChange={(e) => {
           countryChange(e.target.value);
         }}
       >
-        <option value="global">Global</option>
+        <option value="-">Global</option>
         {countryList.map((country, index) => (
           <option key={index} value={country}>
             {country}

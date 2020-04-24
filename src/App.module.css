@@ -6,4 +6,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.titleImage {
+  width: 370px;
+  margin-top: 40px;
+}
+
+@media (max-width: 770px) {
+  .container {
+    margin: 0 10%;
+  }
+
+  .titleImage {
+    width: 100%;
+  }
 }

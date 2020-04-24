@@ -1,7 +1,10 @@
 import React from "react";
-import "./App.module.css";
 import { Cards, Chart, CountryDropdown } from "./components";
 import { fetchData } from "./api";
+
+import covidImage from "./images/covid19.png";
+
+import styles from "./App.module.css";
 
 class App extends React.Component {
   state = {
@@ -26,7 +29,12 @@ class App extends React.Component {
   render() {
     const { data, country } = this.state;
     return (
-      <div className="container">
+      <div className={styles.container}>
+        <img
+          className={styles.covidImage}
+          src={covidImage}
+          alt="COVID-19 image"
+        />
         <Cards data={data} />
         <CountryDropdown countryChange={this.handleCountryChange} />
         <Chart data={data} country={country} />
