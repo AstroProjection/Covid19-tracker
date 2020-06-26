@@ -2,6 +2,7 @@
   "name": "covid19_tracker",
   "version": "0.1.0",
   "private": true,
+  "homepage":"http://AstroProjection.github.io/Covid19-tracker",
   "dependencies": {
     "@material-ui/core": "^4.9.11",
     "@testing-library/jest-dom": "^4.2.4",
